@@ -13,7 +13,7 @@ class AlderTest {
             .søknadsdato(LocalDate.of(2023, 7, 7))
             .vurder()
 
-        aldersvilkårsvurdering.resultat shouldBe true
+        aldersvilkårsvurdering.resultat() shouldBe true
     }
 
     @Test
@@ -23,7 +23,7 @@ class AlderTest {
             .søknadsdato(LocalDate.of(2023, 7, 7))
             .vurder()
 
-        aldersvilkårsvurdering.resultat shouldBe false
+        aldersvilkårsvurdering.resultat() shouldBe false
     }
 
     @Test
@@ -33,7 +33,7 @@ class AlderTest {
             .søknadsdato(LocalDate.of(2023, 7, 7))
             .vurder()
 
-        aldersvilkårsvurdering.resultat shouldBe true
+        aldersvilkårsvurdering.resultat() shouldBe true
     }
 
     @Test
@@ -43,7 +43,7 @@ class AlderTest {
             .søknadsdato(LocalDate.of(2023, 8, 7))
             .vurder()
 
-        aldersvilkårsvurdering.resultat shouldBe false
+        aldersvilkårsvurdering.resultat() shouldBe false
     }
 
     @Test
@@ -53,7 +53,7 @@ class AlderTest {
             .søknadsdato(LocalDate.of(2024, 1, 7))
             .vurder()
 
-        aldersvilkårsvurdering.resultat shouldBe true
+        aldersvilkårsvurdering.resultat() shouldBe true
     }
 
     @Test
@@ -63,7 +63,7 @@ class AlderTest {
             .søknadsdato(LocalDate.of(2024, 7, 7))
             .vurder()
 
-        aldersvilkårsvurdering.resultat shouldBe false
+        aldersvilkårsvurdering.resultat() shouldBe false
     }
 
     @Test
@@ -73,7 +73,7 @@ class AlderTest {
             .søknadsdato(LocalDate.of(2024, 7, 7))
             .vurder()
 
-        aldersvilkårsvurdering.resultat shouldBe true
+        aldersvilkårsvurdering.resultat() shouldBe true
     }
 
     @Test
@@ -83,6 +83,6 @@ class AlderTest {
             .søknadsdato(LocalDate.of(2024, 8, 7))
             .vurder()
 
-        aldersvilkårsvurdering.resultat shouldBe false
+        aldersvilkårsvurdering.resultat() shouldBe false
     }
 }

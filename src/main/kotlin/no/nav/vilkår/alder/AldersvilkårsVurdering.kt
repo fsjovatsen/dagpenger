@@ -1,9 +1,10 @@
 package no.nav.vilkår.alder
 
+import no.nav.vilkår.Vilkår
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 
-class AldersvilkårsVurdering {
+class AldersvilkårsVurdering : Vilkår{
 
     private lateinit var fødselsdato: LocalDate
     private lateinit var søknadsdato: LocalDate
@@ -19,7 +20,7 @@ class AldersvilkårsVurdering {
     }
 
 
-    fun vurder(): AldersvilkårResultat {
+    override fun vurder(): AldersvilkårResultat {
             val between = ChronoUnit.MONTHS.between(fødselsdato, søknadsdato)
             val gjeldendeRegel = finnGjeldendeRegel(søknadsdato)
 

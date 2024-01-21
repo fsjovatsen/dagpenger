@@ -1,8 +1,9 @@
 package no.nav.vilkår.inntekt
 
+import no.nav.vilkår.Vilkår
 import java.math.BigDecimal
 
-class MinsteinntektVurdering {
+class MinsteinntektVurdering : Vilkår {
     private lateinit var inntekt: Inntekt
     private lateinit var grunnbeløpSats: BigDecimal
     fun inntekt(inntekt: Inntekt): MinsteinntektVurdering {
@@ -15,7 +16,7 @@ class MinsteinntektVurdering {
         return this
     }
 
-    fun vurder(): MinsteinntektResultat {
+    override fun vurder(): MinsteinntektResultat {
         val inntektsPerioder = inntekt.splitIntoInntektsPerioder()
         val sumInntektSiste12Måneder = inntektsPerioder.first.sumInntekt(MinsteInntekt12Eller36Måndeder().innkluderInnteksKlasser)
         val sumInntektSiste36Måneder =
