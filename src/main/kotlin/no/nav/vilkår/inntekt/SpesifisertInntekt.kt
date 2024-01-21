@@ -58,7 +58,7 @@ data class InntektId(val id: String) {
 
 data class Periode(
     val startDato: LocalDate,
-    val sluttDato: LocalDate,
+    val sluttDato: LocalDate?,
 )
 
 data class Aktør(
